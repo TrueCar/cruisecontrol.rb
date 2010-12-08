@@ -1,6 +1,6 @@
 # Be sure to restart your web server when you modify this file.
 
-# Uncomment below to force Rails into production mode when 
+# Uncomment below to force Rails into production mode when
 # you don't control web/app server and can't set it the proper way
 # CC.rb: this line should stay commented out
 # ENV['RAILS_ENV'] ||= 'production'
@@ -17,7 +17,7 @@ Rails::Initializer.run do |config|
   config.gem "xml-simple", :lib => "xmlsimple"
   config.gem "mocha"
   config.gem "rcov" if RUBY_VERSION != '1.8.7' && RUBY_VERSION !~ /^1.9/
-  
+
   def find_home
     looks_like_windows = (Config::CONFIG["target_os"] =~ /32/)
 
@@ -51,14 +51,13 @@ Rails::Initializer.run do |config|
   # Add additional load paths for your own custom dirs
   config.load_paths << "#{CRUISE_DATA_ROOT}/builder_plugins"
   config.load_paths << "#{RAILS_ROOT}/lib/builder_plugins"
-  
+
   config.after_initialize do
     require RAILS_ROOT + '/config/configuration'
   end
 end
 
 require RAILS_ROOT + '/lib/cruise_control/version'
-require 'smtp_tls'
 require 'date'
 require 'fileutils'
 

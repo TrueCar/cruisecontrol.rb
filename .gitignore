@@ -13,3 +13,5 @@ public/builds
 .tmtags
 .DS_Store
 tmtags
+.idea
+vendor/plugins/action_mailer_optional_tls

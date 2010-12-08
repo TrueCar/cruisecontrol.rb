@@ -1,0 +1,3 @@
+action_mailer_optional_tls:
+  repo: https://github.com/collectiveidea/action_mailer_optional_tls.git
+  path: vendor/plugins
